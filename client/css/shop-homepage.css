@@ -1,24 +1,11 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
 
-* {
-	box-sizing: border-box;
-}
-html,
 body {
-	margin: 0px;
-	padding: 0px;
-}
-body {
-  /*url(img/tileable_wood_texture.png) repeat*/
-	background: #000 ;
-	font-family: "Cinzel Decorative";
-  padding-top: 70px;
-}
-.slide-image{
-  max-width: 800px;
-  max-height: 300px;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .slide-image {
@@ -64,4 +51,4 @@ body {
 
 footer {
     margin: 50px 0;
-  }
+}
