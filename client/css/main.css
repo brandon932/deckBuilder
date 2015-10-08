@@ -1,28 +1,13 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-* {
-	box-sizing: border-box;
-}
-html,
-body {
-	margin: 0px;
-	padding: 0px;
-}
-body {
-  /*url(img/tileable_wood_texture.png) repeat*/
+html, body {
 	background: #000 ;
 	font-family: "Cinzel Decorative";
-  padding-top: 70px;
+	margin: 0px;
+  padding-top: 55px;
 }
 .slide-image{
   max-width: 800px;
   max-height: 300px;
-}
-
-.slide-image {
-    width: 100%;
+  width: 100%;
 }
 
 .carousel-holder {
@@ -43,8 +28,8 @@ body {
     white-space: nowrap;
 }
 
-.thumbnail img {
-    width: 100%;
+.img {
+    margin-right:  36px;
 }
 
 .ratings {
@@ -61,7 +46,16 @@ body {
     padding: 9px;
     color: #333;
 }
-
+.container{
+  margin: 5px;
+  width: 95%;
+}
+.row{
+  margin-right:5px;
+}
+.left{
+  float: right;
+}
 footer {
     margin: 50px 0;
   }

@@ -11,7 +11,6 @@
   <title>Deck Builder</title>
   <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href="css/shop-homepage.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -27,7 +26,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Deck Builder</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,6 +35,12 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a><li>
           </ul>
+          <div class="left">
+            <ul class="nav navbar-nav ">
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Sign up</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -43,16 +48,15 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-1">
-          <p class="lead">Shop Name</p>
+        <div class="col-md-2 text-center">
+          <p class="lead text-center">{{setName}}</p>
+          <input type="text" ng-model="findSet" class="text-center form-control" placeholder="Search..">
           <div class="list-group">
-            <a href="#" class="list-group-item">Category 1</a>
-            <a href="#" class="list-group-item">Category 2</a>
-            <a href="#" class="list-group-item">Category 3</a>
+            <side-bar class="text-center" setName="setName" sets="sets"></side-bar>
           </div>
         </div>
 
-        <div class="col-md-11">
+        <div class="col-md-10">
 
           <div class="row carousel-holder">
 
@@ -85,20 +89,24 @@
 
           </div>
 
-          <div class="row">
 
-            <div ng-repeat="card in cards"  ng-if="$index % 5 == 0" class="row">
-              <div class="col-xs-2"><img src="{{cards[$index].editions[0].image_url}}"/></div>
-              <div class="col-xs-2"><img src="{{cards[$index +1].editions[0].image_url}}"/></div>
-              <div class="col-xs-2"><img src="{{cards[$index + 2].editions[0].image_url}}"/></div>
-              <div class="col-xs-2"><img src="{{cards[$index + 3].editions[0].image_url}}"/></div>
-              <div class="col-xs-2"><img src="{{cards[$index + 4].editions[0].image_url}}"/></div>
+            <div class="row">
+              <magic-card  cards="cards"></magic-card>
             </div>
-          </div>
-        </div>
+
+
+          <!-- <div ng-repeat="card in cards"  ng-if="$index % 5 == 0" class="row">
+          <div class="col-md-2 col-xs-6 img"><img src="{{cards[$index].editions[0].image_url}}"/></div>
+          <div class="col-md-2 col-xs-6 img"><img src="{{cards[$index + 1].editions[0].image_url}}"/></div>
+          <div class="col-md-2 col-xs-6 img"><img src="{{cards[$index + 2].editions[0].image_url}}"/></div>
+          <div class="col-md-2 col-xs-6 img"><img src="{{cards[$index + 3].editions[0].image_url}}"/></div>
+          <div class="col-md-2 col-xs-6 img"><img src="{{cards[$index + 4].editions[0].image_url}}"/></div>
+        </div> -->
+        <!-- </div> -->
       </div>
-    </div>
+    </div >
   </div>
+</div>
 </div>
 <!-- /.container -->
 <div class="container">
@@ -141,7 +149,10 @@
 <script type="text/javascript" src="/js/app.js"></script>
 <script src="./js/services.js" type="text/javascript"></script>
 <script type="text/javascript" src="/js/controller.js"></script>
-<script type="text/javascript" src="/js/directives.js"></script>
+<script type="text/javascript" src="/js/directives/magicCards.js"></script>
+<script type="text/javascript" src="/js/directives/sideBar.js"></script>
+<script type="text/javascript" src="/js/directives/modal.js"></script>
+<script type="text/javascript" src="/js/directives/popovers.js"></script>
 </body>
 
 </html>
