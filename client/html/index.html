@@ -11,6 +11,7 @@
   <title>Deck Builder</title>
   <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -86,13 +87,15 @@
                 </a>
               </div>
             </div>
-
           </div>
 
+          <div class="container text-center">
+            <p>enter search fiel here</p>
+          </div>
 
-            <div class="row">
-              <magic-card  cards="cards"></magic-card>
-            </div>
+          <div class="row">
+            <magic-card  cards="cards"></magic-card>
+          </div>
 
 
           <!-- <div ng-repeat="card in cards"  ng-if="$index % 5 == 0" class="row">
@@ -152,7 +155,9 @@
 <script type="text/javascript" src="/js/directives/magicCards.js"></script>
 <script type="text/javascript" src="/js/directives/sideBar.js"></script>
 <script type="text/javascript" src="/js/directives/modal.js"></script>
+<script type="text/javascript" src="/js/directives/slick.js"></script>
 <script type="text/javascript" src="/js/directives/popovers.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
 </body>
 
 </html>

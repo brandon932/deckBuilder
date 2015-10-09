@@ -22,7 +22,7 @@ app.controller("myController", function($scope, $timeout, httpFactory){
 
   $scope.getCards("https://api.deckbrew.com/mtg/cards?set=BFZ");
   $scope.getSets('https://api.deckbrew.com/mtg/sets');
-  $scope.setName = "Battle for Zendicar";
+  $scope.setName = "Battle for Zendikar";
   // console.log($scope.setName);
 
   $scope.fn = function(card){

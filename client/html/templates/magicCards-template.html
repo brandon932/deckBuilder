@@ -1,9 +1,4 @@
 
-<div ng-repeat="card in cards | filter:findSet" >
+<div ng-repeat="card in cards " >
   <div popover  ng-click="fn(card)"class="col-md-2 col-xs-4 img"><img hover ng-src="{{card.editions[0].image_url}}"/></div>
-  <!-- <div popover ng-click="fn(cards[$index + 1])"class="col-md-2 col-xs-6 img"><img hover ng-src="{{cards[$index + 1].editions[0].image_url}}"/></div>
-  <div popover ng-click="fn(cards[$index + 2])"class="col-md-2 col-xs-6 img"><img hover ng-src="{{cards[$index + 2].editions[0].image_url}}"/></div>
-  <div popover ng-click="fn(cards[$index + 3])"class="col-md-2 col-xs-6 img"><img hover ng-src="{{cards[$index + 3].editions[0].image_url}}"/></div>
-  <div popover ng-click="fn(cards[$index + 4])"class="col-md-2 col-xs-6 img"><img hover ng-src="{{cards[$index + 4].editions[0].image_url}}"/></div> -->
-  <!--  -->
 </div>
