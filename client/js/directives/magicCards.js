@@ -1,4 +1,3 @@
-// var app = angular.module('myApp',[]);
 // var app = require("./controller.js");
 app.directive('magicCard', function() {
   return {

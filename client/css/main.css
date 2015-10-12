@@ -57,7 +57,7 @@ html, body {
   float: right;
 }
 .popover{
-  max-width: 100%;
+  max-width: 30%;
 }
 footer {
     margin: 50px 0;
