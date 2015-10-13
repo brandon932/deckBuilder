@@ -1,5 +1,5 @@
 
-var app = angular.module('myApp',["ngRoute"]);
+var app = angular.module('myApp',["ui.bootstrap", "ngRoute",]);
 
 app.config(function ($routeProvider) {
   $routeProvider
@@ -22,12 +22,16 @@ app.config(function ($routeProvider) {
       access: {restricted: false}
     })
     .when('/one', {
-      template: '<h1>This is page one!</h1>',
+      templateUrl: 'html/partials/myDecks.html',
       access: {restricted: true}
     })
     .when('/two', {
       template: '<h1>This is page two!</h1>',
       access: {restricted: true}
+    })
+    .when('/about', {
+      template: '<h1>this is my about page</h1>',
+      access: {restricted: false}
     })
     .otherwise({redirectTo: '/'});
 });

@@ -16,7 +16,7 @@ app.controller('loginController',
         .then(function () {
           $location.path('/');
           $scope.disabled = false;
-          $scope.loginForm = {};
+          $scope.loginForm = {};  
         })
         // handle error
         .catch(function () {

@@ -1,4 +1,5 @@
-app.controller("myController", function($scope, $timeout, httpFactory){
+app.controller("myController", function($scope, $timeout, httpFactory, $uibModal, $log ){
+
 
   $scope.getCards= function(url){
     httpFactory.get(url)
@@ -26,18 +27,13 @@ app.controller("myController", function($scope, $timeout, httpFactory){
   // console.log($scope.setName);
 
   $scope.myCards = [];
-  $scope.fn = function(card){
-    $scope.myCards.push(card);
-    console.log($scope.myCards);
-  } ;
+  // $scope.fn = function(card){
+  //   $scope.myCards.push(card);
+  //   console.log($scope.myCards);
+  // } ;
 
   $scope.showMyCards = function(){
     $scope.cards = $scope.myCards;
   };
 
-
-});
-
-
-
-// module.exports = app;
+  });

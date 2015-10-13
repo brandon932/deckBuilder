@@ -56,9 +56,6 @@ html, body {
 .left{
   float: right;
 }
-.popover{
-  max-width: 30%;
-}
 footer {
     margin: 50px 0;
   }

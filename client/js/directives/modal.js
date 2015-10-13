@@ -1,51 +1,64 @@
-app.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
+app.directive("myModal", function( $uibModal, $log){
 
-  $scope.items = ['item1', 'item2', 'item3'];
+  return {
+    restrict: 'A',
+    scope: false,
+    controller: function ($scope, $uibModal, $log ) {
 
-  $scope.animationsEnabled = true;
+      $scope.animationsEnabled = true;
 
-  $scope.open = function (size) {
+      $scope.open = function (card) {
+        // console.log(card);
 
-    var modalInstance = $modal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'myModalContent.html',
-      controller: 'ModalInstanceCtrl',
-      size: size,
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
+        var modalInstance = $uibModal.open({
+          $scope: true,
+          animation: $scope.animationsEnabled,
+          templateUrl: 'html/templates/magicModal-template.html',
+          controller: 'ModalInstanceCtrl',
+          resolve: {
+            items: function () {
+              return card;
+              // return $scope.items;
+            }
+          }
+        });
 
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
+        modalInstance.result.then(function (selectedItem) {
+          $scope.selected = selectedItem;
+        }, function () {
+          $log.info('Modal dismissed at: ' + new Date());
+        });
+      };
+
+
+    }
   };
-
-  $scope.toggleAnimation = function () {
-    $scope.animationsEnabled = !$scope.animationsEnabled;
-  };
-
 });
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
+// It us not the same as the $uibModal service used above.
 
 app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
-
   $scope.items = items;
+  // $scope.myCards = [];
+
   $scope.selected = {
     item: $scope.items[0]
   };
 
+  $scope.fn = function(card){
+    $scope.myCards.push(card);
+    console.log($scope.myCards);
+  } ;
   $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
+
+    console.log($scope.myCards);
+
+    $modalInstance.close();
   };
 
   $scope.cancel = function () {
+
     $modalInstance.dismiss('cancel');
   };
 });

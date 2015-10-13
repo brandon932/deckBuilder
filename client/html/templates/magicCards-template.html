@@ -1,4 +1,4 @@
 
 <div ng-repeat="card in cards track by $index " >
-  <div popover  ng-click="open(card)"class="col-md-2 col-xs-4 img"><img hover ng-src="{{card.editions[0].image_url}}"/></div>
+  <div  my-modal ng-click="open(card)"class="col-md-2 col-xs-4 img"><img hover ng-src="{{card.editions[0].image_url}}"/></div>
 </div>

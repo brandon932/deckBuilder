@@ -11,7 +11,6 @@
   <title>Deck Builder</title>
   <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body ng-controller="myController">
@@ -32,9 +31,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a><li>
+          <li><a href="#/about">About</a></li>
+          <li><a href="#/one">Services</a></li>
+          <li><a href="#/two">Contact</a><li>
           </ul>
           <div class="left">
             <ul class="nav navbar-nav ">
@@ -47,9 +46,8 @@
     </nav>
     <!-- Page Content -->
 
-    <!-- <div class="container"> -->
-    <div ng-view></div>
-    <!-- </div> -->
+
+      <div ng-view></div>
 
 
     <!-- Footer -->
@@ -69,22 +67,24 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.js'></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.1/ui-bootstrap-tpls.js"></script>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/slick.min.js"></script> -->
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/services/services.js" ></script>
     <script type="text/javascript" src="/js/services/authService.js" ></script>
-    <script type="text/javascript" src="/js/controller.js"></script>
+    <script type="text/javascript" src="/js/controllers/controller.js"></script>
     <script type="text/javascript" src="/js/directives/magicCards.js"></script>
     <script type="text/javascript" src="/js/directives/sideBar.js"></script>
     <!-- <script type="text/javascript" src="/js/directives/modal.js"></script> -->
-    <script type="text/javascript" src="/js/directives/slick.js"></script>
-    <script type="text/javascript" src="/js/directives/popovers.js"></script>
+    <!-- <script type="text/javascript" src="/js/directives/popovers.js"></script> -->
     <script type="text/javascript" src="/js/directives/modal.js"></script>
-    <script type="text/javascript" src="/js/controller/loginController.js"></script>
-    <script type="text/javascript" src="/js/controller/logoutController.js"></script>
-    <script type="text/javascript" src="/js/controller/registerController.js"></script>
+    <script type="text/javascript" src="/js/controllers/loginController.js"></script>
+    <script type="text/javascript" src="/js/controllers/logoutController.js"></script>
+    <script type="text/javascript" src="/js/controllers/registerController.js"></script>
 
   </body>
 
