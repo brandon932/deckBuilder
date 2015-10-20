@@ -26,12 +26,13 @@ app.controller("myController", function($scope, $timeout, httpFactory, $uibModal
   $scope.setName = "Battle for Zendikar";
   // console.log($scope.setName);
 
-  $scope.myCards = [];
+  // $scope.myCards = [];
   // $scope.fn = function(card){
   //   $scope.myCards.push(card);
   //   console.log($scope.myCards);
+  //   console.log("hello fn");
   // } ;
-
+  // 
   $scope.showMyCards = function(){
     $scope.cards = $scope.myCards;
   };

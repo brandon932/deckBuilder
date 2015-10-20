@@ -8,10 +8,8 @@ app.directive("myModal", function( $uibModal, $log){
       $scope.animationsEnabled = true;
 
       $scope.open = function (card) {
-        // console.log(card);
-
         var modalInstance = $uibModal.open({
-          $scope: true,
+          $scope: false,
           animation: $scope.animationsEnabled,
           templateUrl: 'html/templates/magicModal-template.html',
           controller: 'ModalInstanceCtrl',
@@ -22,15 +20,12 @@ app.directive("myModal", function( $uibModal, $log){
             }
           }
         });
-
         modalInstance.result.then(function (selectedItem) {
           $scope.selected = selectedItem;
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
         });
       };
-
-
     }
   };
 });
@@ -40,20 +35,18 @@ app.directive("myModal", function( $uibModal, $log){
 
 app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
   $scope.items = items;
-  // $scope.myCards = [];
+  $scope.myCards = [];
 
   $scope.selected = {
     item: $scope.items[0]
   };
 
   $scope.fn = function(card){
+    console.log(card);
     $scope.myCards.push(card);
-    console.log($scope.myCards);
   } ;
   $scope.ok = function () {
-
     console.log($scope.myCards);
-
     $modalInstance.close();
   };
 
