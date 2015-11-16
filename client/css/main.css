@@ -30,6 +30,8 @@ html, body {
 
 .img {
     margin-right:  36px;
+    max-width: 222px;
+    max-height: 311px;
 }
 
 .ratings {
