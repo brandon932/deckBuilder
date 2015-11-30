@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Deck = require('../models/decks.js');
+var request = require('request');
 
 router.get('/decks', function(req, res, next) {
     Deck.find(function(err,decks){

@@ -1,12 +1,10 @@
-app.directive("myModal", function( $uibModal, $log){
+app.directive("myModal", function( $uibModal, $log, $scope){
 
   return {
     restrict: 'A',
     scope: false,
     controller: function ($scope, $uibModal, $log ) {
-
       $scope.animationsEnabled = true;
-
       $scope.open = function (card) {
         var modalInstance = $uibModal.open({
           $scope: false,
@@ -15,8 +13,8 @@ app.directive("myModal", function( $uibModal, $log){
           controller: 'ModalInstanceCtrl',
           resolve: {
             items: function () {
-              return card;
-              // return $scope.items;
+              // return card;
+              return $scope.items;
             }
           }
         });
@@ -35,7 +33,7 @@ app.directive("myModal", function( $uibModal, $log){
 
 app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
   $scope.items = items;
-  $scope.myCards = [];
+  // $scope.myCards = [];
 
   $scope.selected = {
     item: $scope.items[0]
