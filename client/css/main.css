@@ -29,7 +29,9 @@ html, body {
 }
 
 .img {
-    margin-right:  36px;
+    /*margin-right:  36px;*/
+    max-width: 222px;
+    max-height: 311px;
 }
 
 .ratings {
@@ -48,7 +50,7 @@ html, body {
 }
 .container{
   margin: 5px;
-  width: 95%;
+  width: 100%;
 }
 .row{
   margin-right:5px;

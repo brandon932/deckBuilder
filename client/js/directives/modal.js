@@ -4,9 +4,7 @@ app.directive("myModal", function( $uibModal, $log){
     restrict: 'A',
     scope: false,
     controller: function ($scope, $uibModal, $log ) {
-
       $scope.animationsEnabled = true;
-
       $scope.open = function (card) {
         var modalInstance = $uibModal.open({
           $scope: false,
@@ -15,8 +13,8 @@ app.directive("myModal", function( $uibModal, $log){
           controller: 'ModalInstanceCtrl',
           resolve: {
             items: function () {
+              console.log(card);
               return card;
-              // return $scope.items;
             }
           }
         });

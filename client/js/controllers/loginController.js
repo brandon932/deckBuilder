@@ -1,8 +1,19 @@
 app.controller('loginController',
-  ['$scope', '$location', 'AuthService',
-  function ($scope, $location, AuthService) {
+  ['$scope','$rootScope', '$location', 'AuthService',
+  function ($scope, $rootScope, $location, AuthService) {
 
-    // console.log(AuthService.getUserStatus());
+        // console.log($rootScope.user);
+
+    $scope.loggedIn = function(){
+        console.log(AuthService.getUserStatus());
+        if (AuthService.getUserStatus() === true) {
+            console.log("true");
+            return false;
+        }else{
+            console.log("false");
+            return true;
+        }
+    };
 
     $scope.login = function () {
 
@@ -16,7 +27,7 @@ app.controller('loginController',
         .then(function () {
           $location.path('/');
           $scope.disabled = false;
-          $scope.loginForm = {};  
+          $scope.loginForm = {};
         })
         // handle error
         .catch(function () {

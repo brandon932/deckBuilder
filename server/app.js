@@ -16,6 +16,7 @@ mongoose.connect("mongodb://localhost/mean-auth");
 // *** routes *** //
 var routes = require('./routes/index.js');
 var user = require('./routes/userAPI.js');
+var decks = require('./routes/decks.js');
 
 
 // *** express instance *** //
@@ -52,6 +53,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/', routes);
 app.use('/auth', user);
+app.use('/api', decks);
 
 
 // catch 404 and forward to error handler

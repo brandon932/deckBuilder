@@ -1,5 +1,15 @@
 app.controller("myController", function($scope, $timeout, httpFactory, $uibModal, $log ){
 
+  // $scope.loggedIn = function(){
+  //     console.log(AuthService.getUserStatus());
+  //     if (AuthService.getUserStatus() === true) {
+  //         console.log("true");
+  //         return false;
+  //     }else{
+  //         console.log("false");
+  //         return true;
+  //     }
+  // };
 
   $scope.getCards= function(url){
     httpFactory.get(url)
@@ -26,13 +36,13 @@ app.controller("myController", function($scope, $timeout, httpFactory, $uibModal
   $scope.setName = "Battle for Zendikar";
   // console.log($scope.setName);
 
-  // $scope.myCards = [];
+  $scope.myCards = [];
   // $scope.fn = function(card){
   //   $scope.myCards.push(card);
   //   console.log($scope.myCards);
   //   console.log("hello fn");
   // } ;
-  // 
+  //
   $scope.showMyCards = function(){
     $scope.cards = $scope.myCards;
   };
