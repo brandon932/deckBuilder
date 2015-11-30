@@ -1,4 +1,4 @@
-app.directive("myModal", function( $uibModal, $log, $scope){
+app.directive("myModal", function( $uibModal, $log){
 
   return {
     restrict: 'A',
@@ -13,8 +13,8 @@ app.directive("myModal", function( $uibModal, $log, $scope){
           controller: 'ModalInstanceCtrl',
           resolve: {
             items: function () {
-              // return card;
-              return $scope.items;
+              console.log(card);
+              return card;
             }
           }
         });
@@ -33,7 +33,7 @@ app.directive("myModal", function( $uibModal, $log, $scope){
 
 app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
   $scope.items = items;
-  // $scope.myCards = [];
+  $scope.myCards = [];
 
   $scope.selected = {
     item: $scope.items[0]
